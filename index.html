@@ -18,140 +18,40 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 116'%3E%3Cpath d='M50 112 C50 112 12 66 12 42 C12 21 29 4 50 4 C71 4 88 21 88 42 C88 66 50 112 50 112 Z' fill='%23C6F23F'/%3E%3Ccircle cx='50' cy='42' r='26' fill='%230C1E3C'/%3E%3Cpath d='M31 24 C44 34 44 50 31 60' fill='none' stroke='%23C6F23F' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M69 24 C56 34 56 50 69 60' fill='none' stroke='%23C6F23F' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
   <style>
-    :root {
-      color-scheme: dark;
-      --navy: #0c1e3c;
-      --lime: #c6f23f;
-      --muted: #c9d2e2;
-      --quiet: #77849a;
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; min-height: 100%; }
-    body {
-      min-height: 100vh;
-      min-height: 100svh;
-      background: var(--navy);
-      color: #fff;
-      font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    }
-    a { color: var(--lime); text-decoration: none; }
-    a:hover, a:focus-visible { color: #fff; }
-    a:focus-visible { outline: 2px solid var(--lime); outline-offset: 4px; border-radius: 2px; }
-    .page {
-      min-height: 100vh;
-      min-height: 100svh;
-      display: grid;
-      place-items: center;
-      padding: 48px 24px 76px;
-      position: relative;
-      overflow: hidden;
-      text-align: center;
-    }
-    .route {
-      position: absolute;
-      width: min(900px, 110vw);
-      height: auto;
-      inset: 50% auto auto 50%;
-      transform: translate(-50%, -52%);
-      opacity: .14;
-      pointer-events: none;
-    }
-    .content {
-      width: min(640px, 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 28px;
-      position: relative;
-      z-index: 1;
-    }
-    .mark {
-      width: 84px;
-      height: 98px;
-      animation: float-ball 4s ease-in-out infinite;
-    }
-    .brand {
-      margin: 0;
-      font-size: clamp(2.6rem, 8vw, 3.4rem);
-      line-height: 1;
-      font-weight: 700;
-      letter-spacing: -.04em;
-    }
-    .brand span { color: var(--lime); }
-    .tagline {
-      margin: 0;
-      font-size: clamp(1.05rem, 4vw, 1.25rem);
-      font-weight: 500;
-      line-height: 1.6;
-      color: var(--muted);
-      text-wrap: balance;
-    }
-    .pill {
-      margin: 0;
-      border: 1px solid var(--lime);
-      background: rgb(198 242 63 / 12%);
-      color: var(--lime);
-      border-radius: 999px;
-      padding: 14px 32px;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: .06em;
-    }
-    .serve {
-      margin: 0;
-      font-size: .8125rem;
-      font-weight: 500;
-      color: var(--quiet);
-    }
-    footer {
-      position: absolute;
-      left: 24px;
-      right: 24px;
-      bottom: 26px;
-      z-index: 1;
-      font-size: .8125rem;
-      font-weight: 500;
-      color: var(--quiet);
-    }
-    @keyframes float-ball {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-14px); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .mark { animation: none; }
-    }
-    @media (max-width: 480px) {
-      .page { padding: 36px 20px 82px; }
-      .content { gap: 24px; }
-      .mark { width: 72px; height: auto; }
-      .pill { padding: 12px 24px; }
-      footer { bottom: 22px; }
-    }
+    :root { color-scheme:dark; --navy:#0c1e3c; --lime:#c6f23f; --muted:#c9d2e2; --quiet:#77849a; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; }
+    body { min-height:100vh; min-height:100svh; background:var(--navy); color:#fff; font-family:'Quicksand',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+    a { color:var(--lime); text-decoration:none; }
+    a:hover,a:focus-visible { color:#fff; }
+    a:focus-visible { outline:2px solid var(--lime); outline-offset:4px; border-radius:2px; }
+    .page { min-height:100vh; min-height:100svh; display:grid; place-items:center; padding:48px 24px 76px; position:relative; overflow:hidden; text-align:center; }
+    .route { position:absolute; width:min(900px,110vw); height:auto; inset:50% auto auto 50%; transform:translate(-50%,-52%); opacity:.14; pointer-events:none; }
+    .content { width:min(640px,100%); display:flex; flex-direction:column; align-items:center; gap:28px; position:relative; z-index:1; }
+    .mark { width:84px; height:98px; animation:float-ball 4s ease-in-out infinite; }
+    .brand { margin:0; font-size:clamp(2.6rem,8vw,3.4rem); line-height:1; font-weight:700; letter-spacing:-.04em; }
+    .brand span { color:var(--lime); }
+    .tagline { margin:0; font-size:clamp(1.05rem,4vw,1.25rem); font-weight:500; line-height:1.6; color:var(--muted); text-wrap:balance; }
+    .pill { margin:0; border:1px solid var(--lime); background:rgb(198 242 63 / 12%); color:var(--lime); border-radius:999px; padding:14px 32px; font-size:1rem; font-weight:700; letter-spacing:.06em; }
+    .serve { margin:0; font-size:.8125rem; font-weight:500; color:var(--quiet); }
+    footer { position:absolute; left:24px; right:24px; bottom:26px; z-index:1; font-size:.8125rem; font-weight:500; color:var(--quiet); }
+    footer a { margin-left:10px; }
+    @keyframes float-ball { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-14px); } }
+    @media (prefers-reduced-motion:reduce) { .mark { animation:none; } }
+    @media (max-width:480px) { .page { padding:36px 20px 82px; } .content { gap:24px; } .mark { width:72px; height:auto; } .pill { padding:12px 24px; } footer { bottom:22px; } }
   </style>
 </head>
 <body>
   <main class="page">
-    <svg class="route" viewBox="0 0 900 500" aria-hidden="true">
-      <path d="M60 460 C260 460 300 140 520 110 C650 92 740 130 840 70" fill="none" stroke="#C6F23F" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 22" />
-      <circle cx="60" cy="460" r="7" fill="#C6F23F" />
-      <circle cx="840" cy="70" r="10" fill="#C6F23F" />
-    </svg>
-
+    <svg class="route" viewBox="0 0 900 500" aria-hidden="true"><path d="M60 460 C260 460 300 140 520 110 C650 92 740 130 840 70" fill="none" stroke="#C6F23F" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 22" /><circle cx="60" cy="460" r="7" fill="#C6F23F" /><circle cx="840" cy="70" r="10" fill="#C6F23F" /></svg>
     <section class="content" aria-labelledby="site-title">
-      <svg class="mark" viewBox="0 0 100 116" role="img" aria-label="TenniTrip tennis location mark">
-        <path d="M50 112 C50 112 12 66 12 42 C12 21 29 4 50 4 C71 4 88 21 88 42 C88 66 50 112 50 112 Z" fill="#C6F23F" />
-        <circle cx="50" cy="42" r="26" fill="#0C1E3C" />
-        <path d="M31 24 C44 34 44 50 31 60" fill="none" stroke="#C6F23F" stroke-width="5" stroke-linecap="round" />
-        <path d="M69 24 C56 34 56 50 69 60" fill="none" stroke="#C6F23F" stroke-width="5" stroke-linecap="round" />
-      </svg>
-
+      <svg class="mark" viewBox="0 0 100 116" role="img" aria-label="TenniTrip tennis location mark"><path d="M50 112 C50 112 12 66 12 42 C12 21 29 4 50 4 C71 4 88 21 88 42 C88 66 50 112 50 112 Z" fill="#C6F23F" /><circle cx="50" cy="42" r="26" fill="#0C1E3C" /><path d="M31 24 C44 34 44 50 31 60" fill="none" stroke="#C6F23F" stroke-width="5" stroke-linecap="round" /><path d="M69 24 C56 34 56 50 69 60" fill="none" stroke="#C6F23F" stroke-width="5" stroke-linecap="round" /></svg>
       <h1 id="site-title" class="brand">Tenni<span>Trip</span></h1>
       <p class="tagline">Something new is coming.</p>
       <p class="pill">Watch this space</p>
       <p class="serve">First serve coming soon.</p>
     </section>
-
-    <footer>© 2026 TenniTrip</footer>
+    <footer>© 2026 TenniTrip <a href="/privacy.html">Privacy</a></footer>
   </main>
 </body>
 </html>
