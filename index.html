@@ -26,7 +26,7 @@
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--navy);color:var(--white);font-family:'Quicksand',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.5}
+    body{margin:0;background:var(--navy);color:var(--white);font-family:'Quicksand',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.5;overflow-x:hidden}
     img{display:block;max-width:100%}
     a{color:inherit;text-decoration:none}
     button,a{font:inherit}
@@ -54,7 +54,6 @@
     .phone-stage{min-height:650px;position:relative;display:grid;place-items:center}
     .phone{position:absolute;border-radius:34px;overflow:hidden;background:#07192f;border:1px solid rgb(255 255 255 / .1);box-shadow:var(--shadow)}
     .phone img{width:100%;height:100%;object-fit:cover}
-    .phone:has(img[src=""]){display:none}
     .phone-main{width:min(330px,72vw);aspect-ratio:697/1375;z-index:3;transform:translateY(8px)}
     .phone-left{width:260px;aspect-ratio:714/1368;left:0;bottom:30px;transform:rotate(-8deg);opacity:.88}
     .phone-right{width:260px;aspect-ratio:700/1370;right:0;top:38px;transform:rotate(8deg);opacity:.92}
@@ -73,15 +72,16 @@
     .feature.light{background:var(--light);color:var(--light-ink)}
     .feature.light .copy p{color:#60708b}
     .feature.light .proof span{color:#163254}
+    .feature.light .quote{color:#60708b}
     .feature.light .visual .halo{background:rgb(17 82 142 / .08)}
     .duo{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:end;width:min(700px,100%)}
     .duo .shot{width:100%}
     .quote{font-size:1.15rem;color:#dce8f7;border-left:3px solid var(--lime);padding-left:18px;margin-top:26px}
-    .journey{padding:100px 0;text-align:center;background:linear-gradient(180deg,#0c1e3c,#102848)}
+    .journey{padding:78px 0;text-align:center;background:linear-gradient(180deg,#0c1e3c,#102848)}
     .journey-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:28px;color:#dfe8f5;font-weight:700}
     .journey-row span{padding:10px 14px;border-radius:999px;border:1px solid var(--line)}
     .journey-row i{font-style:normal;color:var(--lime);padding:10px 4px}
-    .final{padding:120px 0;text-align:center;position:relative;overflow:hidden}
+    .final{padding:96px 0;text-align:center;position:relative;overflow:hidden}
     .final:before{content:"";position:absolute;inset:15% 25%;background:radial-gradient(circle,rgb(198 242 63 / .12),transparent 70%);filter:blur(10px)}
     .final-inner{position:relative;max-width:820px;margin:auto}
     .final h2{font-size:clamp(2.6rem,5vw,4.8rem)}
@@ -90,12 +90,11 @@
     .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
     .reveal.visible{opacity:1;transform:none}
-    .asset-note{display:none}
     @media (max-width:980px){
       .nav-links a:not(.cta){display:none}.hero-grid,.feature-grid{grid-template-columns:1fr}.hero{text-align:center;padding-top:72px}.lead{margin-left:auto;margin-right:auto}.hero-actions{justify-content:center}.phone-stage{min-height:620px;max-width:720px;margin:auto}.feature{padding:80px 0}.feature-grid{gap:34px}.feature:nth-of-type(even) .copy{order:initial}.copy{text-align:center}.copy p{margin-left:auto;margin-right:auto}.proof{width:max-content;max-width:100%;margin:24px auto 0;text-align:left}.visual{min-height:auto}.duo{width:min(620px,100%)}
     }
     @media (max-width:640px){
-      .wrap{width:min(100% - 28px,1180px)}.nav-inner{height:64px}.nav-links{gap:8px}.nav-links .cta{padding:10px 14px}.hero{padding:58px 0 44px}.phone-stage{min-height:500px}.phone-main{width:250px}.phone-left,.phone-right{width:185px}.phone-left{left:-15px}.phone-right{right:-15px}.feature{padding:68px 0}.feature-grid{gap:26px}.shot{border-radius:24px}.duo{grid-template-columns:1fr 1fr;gap:10px}.journey{padding:68px 0}.journey-row i{display:none}.final{padding:85px 0}.footer-inner{justify-content:center;text-align:center}
+      .wrap{width:min(100% - 28px,1180px)}.nav-inner{height:64px}.nav-links{gap:8px}.nav-links .cta{padding:10px 14px}.hero{padding:58px 0 44px}.phone-stage{min-height:500px}.phone-main{width:250px}.phone-left,.phone-right{width:185px}.phone-left{left:-15px}.phone-right{right:-15px}.feature{padding:68px 0}.feature-grid{gap:26px}.shot{border-radius:24px}.duo{grid-template-columns:1fr 1fr;gap:10px}.journey{padding:62px 0}.journey-row i{display:none}.final{padding:78px 0}.footer-inner{justify-content:center;text-align:center}
     }
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
   </style>
@@ -122,12 +121,12 @@
           <h1>Their next tournament is only part of the journey.</h1>
           <p class="lead">TenniTrip helps families discover tournaments, plan the season, organise travel, prepare for tournament day and follow the player’s journey — all in one place.</p>
           <div class="hero-actions"><a class="cta" href="#beta">Join the Private Beta →</a><a class="cta secondary" href="#plan">See how TenniTrip works ↓</a></div>
-          <p class="micro">Discover → Decide → Plan → Travel → Play → Track</p>
+          <p class="micro">Discover → Plan → Prepare → Travel → Check conditions → Play → Track</p>
         </div>
         <div class="phone-stage reveal" aria-label="TenniTrip app preview">
           <div class="phone phone-left"><img src="assets/home-dark.png" alt="TenniTrip home screen showing the next tournament and checklist" /></div>
           <div class="phone phone-main"><img src="assets/season-dark.png" alt="TenniTrip season planner" /></div>
-          <div class="phone phone-right"><img src="assets/recommendations.png" alt="TenniTrip tournament recommendations" /></div>
+          <div class="phone phone-right"><img src="assets/recommendatoins.png" alt="TenniTrip tournament recommendations" /></div>
         </div>
       </div>
     </section>
@@ -139,7 +138,7 @@
 
     <section class="feature light" id="discover"><div class="wrap feature-grid">
       <div class="copy reveal"><div class="kicker">Discover</div><h2>Find tournaments that actually fit.</h2><p>Discover events based on the player’s calendar, age category and tournament plan — and see exactly why TenniTrip is suggesting them.</p><div class="proof"><span><b>✓</b> Fits a free week in your plan</span><span><b>✓</b> Runs the U14 draw</span><span><b>✓</b> Close to home</span></div><p class="quote">No mysterious match scores. Just useful reasons.</p></div>
-      <div class="visual reveal"><img class="shot" src="assets/recommendations.png" alt="Recommended for you tournament cards explaining why they fit" /></div>
+      <div class="visual reveal"><img class="shot" src="assets/recommendatoins.png" alt="Recommended for you tournament cards explaining why they fit" /></div>
     </div></section>
 
     <section class="feature" id="prepare"><div class="wrap feature-grid">
@@ -167,7 +166,7 @@
       <div class="visual reveal"><img class="shot" src="assets/career-dark.png" alt="Career screen with season totals and AITA ranking" /></div>
     </div></section>
 
-    <section class="journey"><div class="wrap reveal"><p class="eyebrow">One continuous journey</p><h2>From “what should we play?” to “look how far they’ve come.”</h2><div class="journey-row"><span>Discover</span><i>→</i><span>Plan</span><i>→</i><span>Prepare</span><i>→</i><span>Travel</span><i>→</i><span>Play</span><i>→</i><span>Track</span></div></div></section>
+    <section class="journey"><div class="wrap reveal"><p class="eyebrow">One continuous journey</p><h2>From “what should we play?” to “look how far they’ve come.”</h2><div class="journey-row"><span>Discover</span><i>→</i><span>Plan</span><i>→</i><span>Prepare</span><i>→</i><span>Travel</span><i>→</i><span>Conditions</span><i>→</i><span>Play</span><i>→</i><span>Track</span></div></div></section>
 
     <section class="final" id="beta"><div class="wrap final-inner reveal">
       <p class="eyebrow">TenniTrip Private Beta</p>
