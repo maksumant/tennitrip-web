@@ -1,0 +1,1 @@
+The recommendations screenshot is stored as recommendatoins.png on this branch; index.html will be updated to that actual filename during Stage 2 polish.
