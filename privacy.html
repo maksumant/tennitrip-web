@@ -51,7 +51,7 @@
       <h2>1. Information we process</h2>
       <p>Depending on the features you use, TenniTrip may process the following information:</p>
       <ul>
-        <li><strong>Account information</strong>, including your name, email address and identifiers received through our authentication providers.</li>
+        <li><strong>Account information</strong>, including your name, email address and identifiers received through supported authentication providers such as Google and Apple.</li>
         <li><strong>Player information</strong> that you choose to add, currently including a player's name, birth year and tennis-registration identifiers for supported circuits, such as an AITA registration number.</li>
         <li><strong>Tournament and participation information</strong>, including events added or selected, age categories, registration status, entry and withdrawal deadlines, withdrawal records and tournament participation history.</li>
         <li><strong>Ranking information</strong>, including ranking circuit, category, rank, ranking points or point components, ranking date, movement where available, and source or provenance information used to show when and where a ranking was obtained.</li>
@@ -61,62 +61,70 @@
         <li><strong>Expense information</strong>, including category, description, amount, currency and date spent.</li>
         <li><strong>Notes</strong> that you choose to write about tournament planning, practice, matches or other matters.</li>
         <li><strong>Match and result information</strong>, including draw, round, match format, participants, score and match status.</li>
+        <li><strong>Product-usage information</strong>, such as app opens, sessions, meaningful screen views and selected feature actions. TenniTrip uses a pseudonymous analytics identifier rather than names or email addresses for product analytics.</li>
         <li><strong>Technical and security information</strong> necessary to authenticate requests, operate the service, protect accounts and diagnose failures. This can include authentication tokens and limited server/request records.</li>
       </ul>
       <p>TenniTrip does not require users to provide information that is unnecessary for the feature they are using. Please avoid placing unnecessary sensitive personal information in free-text notes.</p>
 
       <h2>2. How we use information</h2>
-      <p>We use information to provide and operate TenniTrip, authenticate users, save and synchronize tournament plans, calculate planning reminders and readiness information, show tournament and travel details, maintain a player's tournament and match history, connect supported registration identifiers to ranking information, display ranking history and progress, support authorized family and coach collaboration, provide weather information where available, secure the service, diagnose technical problems and improve reliability.</p>
+      <p>We use information to provide and operate TenniTrip, authenticate users, save and synchronize tournament plans, calculate planning reminders and readiness information, show tournament and travel details, maintain a player's tournament and match history, connect supported registration identifiers to ranking information, display ranking history and progress, support authorized family and coach collaboration, provide weather information where available, secure the service, diagnose technical problems, understand how core product features are used and improve reliability and usability.</p>
       <p>We do not sell personal information. We do not use personal information for third-party advertising.</p>
 
       <h2>3. Junior players</h2>
       <p>TenniTrip is intended to support tennis families and may therefore contain information about junior players. A parent, guardian or other authorized adult should manage a child's information where required by applicable law. Users, including coaches, should only enter, access or share information about another person when they are authorized to do so.</p>
-      <p>TenniTrip does not sell junior-player information or use it for third-party advertising.</p>
+      <p>TenniTrip does not sell junior-player information or use it for third-party advertising. Product analytics is intended to measure use of TenniTrip features, not to create behavioural profiles of junior players.</p>
 
       <h2>4. Authentication and sign-in</h2>
-      <p>TenniTrip currently supports sign-in through Google using Amazon Cognito as the authentication service. When you sign in, TenniTrip receives the account information needed to identify your TenniTrip account, such as your name, email address and authentication identifier. TenniTrip does not receive your Google password.</p>
-      <p>Your Google account remains controlled by Google. Deleting a TenniTrip account does not delete your Google account.</p>
+      <p>TenniTrip supports sign-in through Google and Apple using Amazon Cognito as the authentication service. When you sign in, TenniTrip receives the account information needed to identify your TenniTrip account, such as your name where provided, your email address and an authentication identifier. TenniTrip does not receive your Google or Apple password.</p>
+      <p>If you choose <strong>Sign in with Apple</strong>, Apple may let you share your normal email address or use <strong>Hide My Email</strong>. If you choose Hide My Email, TenniTrip may receive an Apple private-relay email address instead of your underlying Apple ID email address. TenniTrip treats that relay address as a valid account email and does not require your underlying Apple email address.</p>
+      <p>Your Google and Apple accounts remain controlled by Google and Apple respectively. Deleting a TenniTrip account does not delete either external account.</p>
 
       <h2>5. Tournament, ranking, location and weather providers</h2>
       <p>TenniTrip may obtain public tournament and ranking information from tennis organizations or tournament and ranking providers, including AITA and services used by AITA. Public ranking information may include a player's name, registration number, year of birth, state, ranking category, rank and points. Where you provide a supported registration number, TenniTrip may use that identifier to match the player in your TenniTrip account with published ranking information.</p>
       <p>To support tournament-location and weather features, a tournament's location may also be processed through geocoding and weather services. These features use the tournament location; TenniTrip does not currently use your phone's precise GPS location for this purpose.</p>
 
       <h2>6. Service providers</h2>
-      <p>TenniTrip relies on service providers to operate the app. Our current infrastructure includes Amazon Web Services for application hosting, database services and authentication. Google may process information when you choose Google sign-in. Apple and Expo may process technical information as part of app build, distribution and platform services. Tournament, ranking, geocoding and weather providers may process or provide the information needed for those features.</p>
+      <p>TenniTrip relies on service providers to operate the app. Our current infrastructure includes Amazon Web Services for application hosting, database services and authentication. Google may process information when you choose Google sign-in, and Apple may process information when you choose Sign in with Apple. Expo and the mobile platform providers may process technical information as part of app build, distribution and platform services. TenniTrip also uses PostHog for product analytics as described below. Tournament, ranking, geocoding and weather providers may process or provide the information needed for those features.</p>
       <p>We provide service providers only the information reasonably needed for the applicable service.</p>
 
-      <h2>7. Sharing with authorized users</h2>
+      <h2>7. Product analytics</h2>
+      <p>TenniTrip uses privacy-conscious product analytics to understand whether the app is useful and reliable. This can include events such as app opens, session starts, meaningful screen views, tournament planning actions, result entry, season or career views, ranking views and coach-suggestion actions.</p>
+      <p>For product analytics, TenniTrip uses a stable pseudonymous analytics identifier rather than a user's name or email address. Analytics events may include coarse contextual properties such as platform, app version, build number, family or coach persona, tournament level or the part of the app from which an action was started.</p>
+      <p>TenniTrip does not intentionally send child or player names, dates of birth, email addresses, phone numbers, home addresses, exact GPS location, authentication tokens, free-text notes, hotel or private travel details, packing-list contents, or identifiable match or ranking histories to product analytics. Session replay and broad automatic capture of user-entered text are not part of the current analytics design.</p>
+      <p>TenniTrip currently uses PostHog as the product-analytics provider. Analytics is used to improve TenniTrip and is not used for third-party advertising.</p>
+
+      <h2>8. Sharing with authorized users</h2>
       <p>TenniTrip supports more than one authorized account having access to the same player. Depending on the role and features enabled, authorized parents, guardians or coaches may be able to see information connected with that player, such as season plans, tournaments, results, rankings or collaboration information. Access is intended to be limited according to the permissions associated with the account's relationship to the player.</p>
       <p>Where a player is shared with another authorized account, information belonging to that shared player may remain available to another authorized account even if one account is deleted. Deleting your account removes your access and deletes information that only your account can reach; it does not necessarily delete shared-player records that another authorized account is still permitted to manage or access.</p>
 
-      <h2>8. Other data sharing</h2>
+      <h2>9. Other data sharing</h2>
       <p>We may share information with service providers that help us operate TenniTrip, when a user directs us to do so, or when disclosure is required by law or reasonably necessary to protect users, the service or others. We do not sell personal information to advertisers, data brokers or other third parties.</p>
 
-      <h2>9. Account and record deletion</h2>
+      <h2>10. Account and record deletion</h2>
       <p>TenniTrip provides an in-app <strong>Delete account</strong> option in Settings. Account deletion is immediate and irreversible after confirmation.</p>
       <p>When you delete your TenniTrip account, TenniTrip removes the account record and data that only that account can access. For a player managed only by your account, this includes that player's tournament participations and associated packing items, travel records, expenses, notes and match results. If another authorized account also manages or has continuing permitted access to a player, shared records may remain for that account and your account's link is removed.</p>
       <p>Public tournament and ranking information independently published by tennis organizations or other providers is not controlled by TenniTrip and is not deleted from those external sources when you delete your TenniTrip account.</p>
-      <p>TenniTrip's authentication-directory identity may remain after app-data deletion. If you later sign in again with the same Google identity, TenniTrip can create a new, empty TenniTrip account. Deleting your TenniTrip account does not delete your Google account or data independently controlled by Google.</p>
+      <p>TenniTrip's authentication-directory identity may remain after app-data deletion. If you later sign in again with the same Google or Apple identity, TenniTrip can create a new, empty TenniTrip account. Deleting your TenniTrip account does not delete your Google account, Apple account or data independently controlled by those providers.</p>
       <p>You may also delete supported individual records, such as tournaments or player records, using the controls provided in the app.</p>
 
-      <h2>10. Data retention</h2>
-      <p>We retain account and planning information while your account is active and the information is needed to provide TenniTrip. When data is deleted through the app, it is removed from the active TenniTrip database in accordance with the implemented deletion flow. Limited information may still exist temporarily in infrastructure backups, logs or security records until those systems rotate or expire it, or where retention is required by law or necessary for security.</p>
+      <h2>11. Data retention</h2>
+      <p>We retain account and planning information while your account is active and the information is needed to provide TenniTrip. When data is deleted through the app, it is removed from the active TenniTrip database in accordance with the implemented deletion flow. Limited information may still exist temporarily in infrastructure backups, logs, security records or analytics systems until those systems rotate, expire or delete it, or where retention is required by law or necessary for security.</p>
       <p>Public tournament or ranking information obtained from external providers may also be retained as part of TenniTrip's tournament and ranking records, including historical observations needed to show ranking history and provenance.</p>
 
-      <h2>11. Your choices</h2>
+      <h2>12. Your choices</h2>
       <p>You control much of the information stored in TenniTrip by choosing what player, registration, tournament, travel, expense, note and result information to add and which supported collaboration relationships to establish. Supported records can be edited or deleted in the app. You can sign out at any time, and you can permanently delete your TenniTrip account from Settings.</p>
-      <p>If TenniTrip introduces device permissions such as push notifications, permission will be controlled through the app and your device settings.</p>
+      <p>When using Sign in with Apple, Apple controls the choice between sharing your normal email address and using Hide My Email. If TenniTrip introduces device permissions such as push notifications, permission will be controlled through the app and your device settings.</p>
 
-      <h2>12. Security</h2>
-      <p>We use reasonable technical and organizational safeguards intended to protect information. These include authenticated access, authorization checks that restrict accounts to permitted player and tournament data, and encrypted network connections. No internet service can guarantee absolute security, so users should also protect access to their devices and Google accounts.</p>
+      <h2>13. Security</h2>
+      <p>We use reasonable technical and organizational safeguards intended to protect information. These include authenticated access, authorization checks that restrict accounts to permitted player and tournament data, encrypted network connections and pseudonymous identifiers for product analytics. No internet service can guarantee absolute security, so users should also protect access to their devices and Google or Apple accounts.</p>
 
-      <h2>13. International processing</h2>
+      <h2>14. International processing</h2>
       <p>TenniTrip and its service providers may process information in locations where they operate infrastructure. Where applicable, we take reasonable steps to use service providers and safeguards appropriate to the information being processed.</p>
 
-      <h2>14. Changes to this policy</h2>
+      <h2>15. Changes to this policy</h2>
       <p>We may update this Privacy Policy as TenniTrip develops or our data practices change. The effective date at the top of this page will be updated when the policy changes. Material changes will be communicated through an appropriate channel where required.</p>
 
-      <h2>15. Contact and privacy requests</h2>
+      <h2>16. Contact and privacy requests</h2>
       <p class="notice">For privacy questions, account or data requests, or questions about this policy, contact <a href="mailto:contact@tennitrip.app">contact@tennitrip.app</a>.</p>
     </article>
 
